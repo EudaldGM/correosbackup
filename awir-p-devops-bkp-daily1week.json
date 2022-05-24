@@ -8,7 +8,7 @@
 			"StartWindowMinutes": 60,
 			"CompletionWindowMinutes": 120,
 			"Lifecycle": {
-				"toDeletedAfterDays": 7
+				"DeletedAfterDays": 7
 			}
 		}]
 	}
