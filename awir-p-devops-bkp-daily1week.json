@@ -1,0 +1,15 @@
+{
+	"BackupPlan": {
+		"BackupPlanName": "awir-p-devops-bkp-daily1week",
+		"Rules": [{
+			"ruleName": "awir-p-devops-bkr-daily",
+			"TargetBackupVaultName":"awir-p-devops-bkv-infraestructura",
+			"scheduleExpression": "cron(0 4 * * ? *)",
+			"startWindowMinutes": 60,
+			"completionWindowMinutes": 120,
+			"lifecycle": {
+				"toDeletedAfterDays": 7
+			}
+		}]
+	}
+}
