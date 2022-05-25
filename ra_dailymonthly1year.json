@@ -1,0 +1,12 @@
+{
+	"BackupPlanId": "awir-p-devops-bks-dailymonthly1year",
+	"BackupSelection": {
+		"SelectionName": "awir-p-devops-bks-dailymonthly1year",
+		"IamRoleArn": "arn:aws:iam::416441121122:role/awir-p-devops-iar-backup",
+		"ListOfTags":[{
+			"ConditionType": "StringEquals",
+			"ConditionKey": "PlanBackupFrecuency",
+			"ConditionValue": "DailyMonthly1Year"
+			}]
+		}
+}

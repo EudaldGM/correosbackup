@@ -1,0 +1,36 @@
+{
+	"BackupPlan": {
+		"BackupPlanName": "awir-p-devops-bkp-dailyweekly1month",
+		"Rules": [{
+				"RuleName": "awir-p-devops-bkr-weekly",
+				"TargetBackupVaultName":"awir-p-devops-bkv-infraestructura",
+				"ScheduleExpression": "cron(0 4 ? * SUN *)",
+				"StartWindowMinutes": 60,
+				"CompletionWindowMinutes": 120,
+				"Lifecycle": {
+					"DeleteAfterDays": 21
+				}
+			},
+			{
+				"RuleName": "awir-p-devops-bkr-monthly",
+				"TargetBackupVaultName":"awir-p-devops-bkv-infraestructura",
+				"ScheduleExpression": "cron(0 4 1 * ? *)",
+				"StartWindowMinutes": 60,
+				"CompletionWindowMinutes": 120,
+				"Lifecycle": {
+					"DeleteAfterDays": 60
+				}
+			},
+			{
+				"RuleName": "awir-p-devops-bkr-daily",
+				"TargetBackupVaultName":"awir-p-devops-bkv-infraestructura",
+				"ScheduleExpression": "cron(0 4 * * ? *)",
+				"StartWindowMinutes": 60,
+				"CompletionWindowMinutes": 120,
+				"Lifecycle": {
+					"DeleteAfterDays": 7
+				}
+			}
+		]
+	}
+}
