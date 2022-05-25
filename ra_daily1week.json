@@ -3,16 +3,14 @@
 	"BackupSelection": {
 		"SelectionName": "awir-p-devops-bks-daily1week",
 		"IamRoleArn": "arn:aws:iam::030165921815:role/awir-p-devops-iar-backup",
-		"BackupSelection": {
-			"Resources": [
-				"*"
-			],
-			"Conditions": {
-				"StringEquals": [{
-					"ConditionKey": "aws:ResourceTag/PlanBackupFrequency",
-					"ConditionValue": "Daily1Week"
-				}]
-			}
+		"Resources": [
+			"*"
+		],
+		"Conditions": {
+			"StringEquals": [{
+				"ConditionKey": "aws:ResourceTag/PlanBackupFrequency",
+				"ConditionValue": "Daily1Week"
+			}]
 		}
 	}
 }
