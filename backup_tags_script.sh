@@ -18,7 +18,7 @@ sed -i "s/iam::.*:role/iam::$accountID:role/g" *.json
 sed -i "s/\"BackupPlanId\":.*,/\"BackupPlanId\":\"$buplan_daily1week\",/g" ra_daily1week.json
 aws backup create-backup-selection --cli-input-json file://ra_daily1week.json
 sed -i "s/\"BackupPlanId\":.*,/\"BackupPlanId\":\"$buplan_dailymonthly1year\",/g" ra_dailymonthly1year.json
-aws backup create-backup-selection --cli-input-json file://ra_dailymontly1year.json
+aws backup create-backup-selection --cli-input-json file://ra_dailymonthly1year.json
 sed -i "s/\"BackupPlanId\":.*,/\"BackupPlanId\":\"$buplan_dailyweekly1month\",/g" ra_dailyweekly1month.json
 aws backup create-backup-selection --cli-input-json file://ra_dailyweekly1month.json
 
