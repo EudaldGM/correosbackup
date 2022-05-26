@@ -18,7 +18,7 @@
 				"StartWindowMinutes": 60,
 				"CompletionWindowMinutes": 120,
 				"Lifecycle": {
-					"ColdStorageAfterDays": 60,
+					"MoveToColdStorageAfterDays": 60,
 					"DeleteAfterDays": 365
 				}
 			},
