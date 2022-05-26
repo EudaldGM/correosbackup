@@ -21,7 +21,3 @@ sed -i "s/\"BackupPlanId\":.*,/\"BackupPlanId\":\"$buplan_dailymonthly1year\",/g
 aws backup create-backup-selection --cli-input-json file://ra_dailymonthly1year.json
 sed -i "s/\"BackupPlanId\":.*,/\"BackupPlanId\":\"$buplan_dailyweekly1month\",/g" ra_dailyweekly1month.json
 aws backup create-backup-selection --cli-input-json file://ra_dailyweekly1month.json
-
-
-###give a-ok to the impersonation of the role by backup.amazonaws.com
-aws iam update-assume-role-policy --role-name awir-p-devops-iar-backup --policy-document file://policy_assumption.json
